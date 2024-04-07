@@ -7,7 +7,9 @@ def main():
     # requesting data from url 
     data = requests.get(key)   
     data = data.json() 
+    print("EMPIEZA")
     print(f"{data['symbol']} price is {data['price']}") 
+    print("TERMINA")
 
 
 if __name__ == '__main__':
