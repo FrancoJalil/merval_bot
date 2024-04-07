@@ -8,6 +8,7 @@ def main():
     data = requests.get(key)   
     data = data.json() 
     print("EMPIEZA")
+    print(data)
     print(f"{data['symbol']} price is {data['price']}") 
     print("TERMINA")
 
