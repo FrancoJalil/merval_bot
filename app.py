@@ -1,15 +1,13 @@
-import json 
-import requests 
+import yfinance as yf
 # defining key/request url 
-key = "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
 
 def main():    
+    ticker = yf.Ticker("GGAL.BA")
     # requesting data from url 
-    data = requests.get(key)   
-    data = data.json() 
     print("EMPIEZA")
-    print(data)
-    print(f"{data['symbol']} price is {data['price']}") 
+    
+    print(ticker.get_info()['currentPrice'])
+    
     print("TERMINA")
 
 
