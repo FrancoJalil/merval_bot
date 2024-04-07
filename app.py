@@ -1,5 +1,3 @@
-import json 
-import requests 
 # defining key/request url 
 key = "https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT"
 
