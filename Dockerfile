@@ -2,7 +2,7 @@ FROM alpine:3.16
 
 RUN apk add --update py3-pip
 
-RUN pip install yfinance
+RUN pip install -r ./requirements.txt
 
 WORKDIR /app/
 
