@@ -12,7 +12,6 @@ ACCESS_TOKEN_SECRET = os.environ.get("ACCESS_TOKEN_SECRET")
 def post_tweet(content):
     print(content)
     print("*"*20)
-    return
     try:
         api = tweepy.Client(BEARER, API_KEY, API_KEY_SECRET,
                             ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
