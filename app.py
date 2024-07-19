@@ -28,11 +28,12 @@ day = datetime.date.today().day
 
 def is_market_day():
     # Obtener el ticker de un símbolo cualquiera, por ejemplo, SPY (ETF S&P 500)
-    ticker = yf.Ticker("M.BA")
+    ticker = yf.Ticker("^MERV")
 
     # Obtener los datos históricos del símbolo para hoy
     historical_data = ticker.history(
-        start=datetime.date.today(), end=datetime.date.today() + timedelta(days=1))
+        start=datetime.date.today(), 
+        end=datetime.date.today() + timedelta(days=1))
 
     # Verificar si hay datos para hoy
     if not historical_data.empty:
@@ -42,7 +43,7 @@ def is_market_day():
 
 
 def get_merval_variance():
-    ticker = yf.Ticker("M.BA")
+    ticker = yf.Ticker("^MERV")
     historical_data = ticker.history(
         start=datetime.date.today(), end=datetime.date.today() + timedelta(days=1))
 
